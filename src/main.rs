@@ -4,6 +4,7 @@
 use cortex_m_semihosting::{debug, hprintln};
 use panic_semihosting as _;
 
+// #[rtic::app(device = stm32wl_hal::pac, peripherals = true)]
 #[rtic::app(device = stm32wl::stm32wle5, peripherals = true)]
 const APP: () = {
     #[init]
