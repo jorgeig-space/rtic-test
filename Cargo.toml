@@ -1,0 +1,22 @@
+[package]
+name = "rtic-test"
+version = "0.1.0"
+edition = "2018"
+authors = ["Jorge Iglesias <jorge@jorgeig.com>"]
+
+[dependencies]
+# stm32wl compiled with svd2rust 0.17
+# stm32wl = { git = "https://github.com/jorgeig-space/stm32wl.git", features = ["stm32wle5", "rt"]}
+
+# stm32wl compiled with svd2rust 0.19
+stm32wl = { git = "https://github.com/jorgeig-space/stm32wl-latest.git", features = ["stm32wle5", "rt"] }
+
+# external stm32wl also compiled with svd2rust 0.19
+# stm32wl = { git = "https://github.com/newAM/stm32wl-rs.git", rev = "239ceea719f2e26b70e8680f87a31b4a309b5ff8", features = ["stm32wle5", "rt"]}
+
+# a HAL that uses the external stm32wl (svd2rust 0.19)
+# stm32wl-hal = { path = "/Users/jorge/gh/stm32wl-hal/hal", features = ["stm32wle5", "rt"] }
+cortex-m-rtic = "0.5.7"
+cortex-m-semihosting = "0.3.7"
+panic-semihosting = "0.5.2"
+
